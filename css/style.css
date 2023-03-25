@@ -78,11 +78,18 @@ header a:hover{
   color:#cccccc;
   font-weight:bold;
 }
+html { 
+  background: url('..img/flyerdesign_25032023_100615.png') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 /* Showcase */
 #showcase{
   min-height:400px;
-  background:url('https://github.com/dan998/dan998.github.io/blob/259cadace759304ed16fc456815dae83599945e9/img/showcase.jpg') no-repeat;
+  background:url('../img/showcase.jpg') no-repeat;
   background-position: center;
   background-size: cover;
   text-align:center;
