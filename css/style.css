@@ -1,4 +1,4 @@
-body{
+{
   font: 15px/1.5 Arial, Helvetica,sans-serif;
   padding:0;
   margin:0;
@@ -82,7 +82,7 @@ header a:hover{
 /* Showcase */
 #showcase{
   min-height:400px;
-  background:url('https://github.com/dan998/dan998.github.io/blob/main/img/IMG-20221129-WA0009.jpg') no-repeat;
+  background:url('https://github.com/dan998/dan998.github.io/blob/main/img/flyerdesign_25032023_100615.png') no-repeat;
   background-position: center;
   background-size: cover;
   text-align:center;
