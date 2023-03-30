@@ -15,17 +15,6 @@ body, html {
   background-size: cover;
 }
 
-body {
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    background-color: #444;
-    margin: 0;
-    padding: 0;
-    
-}
-
-
 input {
     border-radius: 0px;
     width: 80%;
