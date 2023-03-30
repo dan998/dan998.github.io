@@ -1,19 +1,4 @@
-body, html {
-  height: 100%;
-}
-
-.bg {
-  /* The image used */
-  background-image: url("moving-art.gif");
-
-  /* Full height */
-  height: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+body, html { background-image:url('moving-art.gif'); background-repeat:repeat; }
 
 input {
     border-radius: 0px;
