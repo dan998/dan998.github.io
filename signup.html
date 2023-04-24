@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Page title</title>
+</head>
+<style>
+      body{
+        background: #444;
+        text-algn: center;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    fieldset{
+        border: 4px solid gold;
+        text-align: center;
+        height: 380px;
+        width: 260px;
+        margin: 0 auto;
+        border-radius: 15px;
+        background: #333;
+        
+    }
+    
+    input {
+        width: 86%;
+        height: 35px;
+        background-color: #333;
+        outline-color: none;
+        outline: none ;
+        border: #333;
+        font-size: 17px;
+        border-bottom: 2px solid gold;
+        font-wight: 100;
+        caret-color: navy;
+        border-radius: 2px;
+        margin:0
+        
+    }
+    
+    button {
+        width: 96%;
+        margin-top:8px;
+        height: 28px;
+        border: #444;
+        text-transform: uppercase;
+        border-radius: 2px;
+        background: blueviolet;
+        color: whitesmoke;
+        margin-bottom: 6px;
+        position: relative;
+    }
+    
+    h1 {
+        color: gold;
+    }
+    
+    p, a{
+        
+        display: inline-block;
+        text-decoration: none ;
+        margin:0 auto ;
+        padding:0;
+    }
+    
+    p{
+        padding-bottom:0px;
+    }
+    
+
+    button:active{
+        background: purple;
+    }
+    
+    img {
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    clip-path: circle(50%);
+}
+
+</style>
+<link rel="shortcut icon" href="codingfam.png" type="image/x-icon">
+
+<body><br>
+<form>
+    <fieldset>
+        <br>
+        <img src="codingfam.png" alt="img">
+        <h1>Coding Family</h1>
+        
+            <input type="text" name="user" id="Fristname" placeholder="FIRSTNAME" maxlength="20">
+            <br><br>
+            <input type="text" name="user" id="Lastname" placeholder="LASTNAME" maxlength="20">
+            <br><br>
+            <input type="text" name="age" id="age" placeholder="Age" maxlength="3">
+            <br><br>
+            <input type="text" name="user" id="username" placeholder="USERNAME" maxlength="12">
+            <br><br>
+            <input type="password" name="pass" id="pass" placeholder="PASSWORD" min="5" maxlength="9"><br><br><p style="font-size:15px">Already Have An Account?</p>&nbsp;<a href="signin.html">Signup</a>
+            <button type="submit">Signup</button><br>
+          <br>  
+          
+    </fieldset>
+    </form>
+    <br>
+</body>
+</html>
