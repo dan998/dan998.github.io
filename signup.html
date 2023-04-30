@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Coding Family GamingTournament Signup</title>
+    <title>Coding family Login Page</title>
 </head>
 <style>
       body{
@@ -13,13 +13,18 @@
         justify-content: center;
     }
     
+    title{
+background: color: #;
+
+}
+    
     fieldset{
-        border: 10px solid gold;
+        border: 4px solid gold;
         text-align: center;
-        height: 430px;
+        height: 480px;
         width: 260px;
         margin: 0 auto;
-        border-radius: 20px;
+        border-radius: 15px;
         background: #333;
         
     }
@@ -52,9 +57,9 @@
         margin-bottom: 6px;
         position: relative;
     }
-    
+    class=""
     h1 {
-        color: gold;
+        color: solid gold;
     }
     
     p, a{
@@ -90,16 +95,44 @@
     <fieldset>
         <br>
         <img src="codingfam.png" alt="img">
+       
         <h1>Coding Family</h1>
-            <input type="text" name="user" id="username" placeholder="username" maxlength="12">
-            <input type="text" name="gmail" id="gmail" placeholder="example@gmail.com" maxlength="25">
-            <br><br>
-            <input type="password" name="pass" id="pass" placeholder="password" min="5" maxlength="9"><br><br><p style="font-size:15px">Already Have An Account?</p>&nbsp;<a href="signin.html">Signin</a>
-            <button type="submit">Signup</button><br>
+        
+           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" /> <link rel="stylesheet" href="css/style.css" /> </head> <body> <div class="container">         <form action="" id="Codingfamilysignup"method="post">
+            <p>
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username">
+            </p>
+                         <label for="username">Gmail account</label>
+                <input type="text" name="username" id="mail account"><placeholder="example@gmail.com"></placeholder>            </p>
+            <p>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" />
+                <i class="bi bi-eye-slash" id="togglePassword"></i>
+            </p>
+            <a href=""></a><button type="submit" id="submit" class="submit">Signup</button></div><br><p style="font-size:15px">Already Have An Account?</p>&nbsp;<a href="signup.html">Signin</a>
           <br>  
-          
-    </fieldset>
-    </form>
-    <br>
+        </form>
+    </div>
+    <script>
+        const togglePassword = document.querySelector("#togglePassword");
+        const password = document.querySelector("#password");
+
+        togglePassword.addEventListener("click", function () {
+            // toggle the type attribute
+            const type = password.getAttribute("type") === "password" ? "text" : "password";
+            password.setAttribute("type", type);
+            
+            // toggle the icon
+            this.classList.toggle("bi-eye");
+        });
+
+        // prevent form submit
+        const form = document.querySelector("form");
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+        });
+    </script>
 </body>
+</fieldset>
 </html>
