@@ -3,63 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Coding family Login Page</title>
+    <title>Coding Family | Signin</title>
 </head>
 <style>
+      *{
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    text-decoration:  none;
+}
+
       body{
-        background: #444;
-        text-algn: center;
+        background-color: #37294b;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='52' height='52' viewBox='0 0 52 52'%3E%3Cpath fill='%23665f71' fill-opacity='1' d='M0 17.83V0h17.83a3 3 0 0 1-5.66 2H5.9A5 5 0 0 1 2 5.9v6.27a3 3 0 0 1-2 5.66zm0 18.34a3 3 0 0 1 2 5.66v6.27A5 5 0 0 1 5.9 52h6.27a3 3 0 0 1 5.66 0H0V36.17zM36.17 52a3 3 0 0 1 5.66 0h6.27a5 5 0 0 1 3.9-3.9v-6.27a3 3 0 0 1 0-5.66V52H36.17zM0 31.93v-9.78a5 5 0 0 1 3.8.72l4.43-4.43a3 3 0 1 1 1.42 1.41L5.2 24.28a5 5 0 0 1 0 5.52l4.44 4.43a3 3 0 1 1-1.42 1.42L3.8 31.2a5 5 0 0 1-3.8.72zm52-14.1a3 3 0 0 1 0-5.66V5.9A5 5 0 0 1 48.1 2h-6.27a3 3 0 0 1-5.66-2H52v17.83zm0 14.1a4.97 4.97 0 0 1-1.72-.72l-4.43 4.44a3 3 0 1 1-1.41-1.42l4.43-4.43a5 5 0 0 1 0-5.52l-4.43-4.43a3 3 0 1 1 1.41-1.41l4.43 4.43c.53-.35 1.12-.6 1.72-.72v9.78zM22.15 0h9.78a5 5 0 0 1-.72 3.8l4.44 4.43a3 3 0 1 1-1.42 1.42L29.8 5.2a5 5 0 0 1-5.52 0l-4.43 4.44a3 3 0 1 1-1.41-1.42l4.43-4.43a5 5 0 0 1-.72-3.8zm0 52c.13-.6.37-1.19.72-1.72l-4.43-4.43a3 3 0 1 1 1.41-1.41l4.43 4.43a5 5 0 0 1 5.52 0l4.43-4.43a3 3 0 1 1 1.42 1.41l-4.44 4.43c.36.53.6 1.12.72 1.72h-9.78zm9.75-24a5 5 0 0 1-3.9 3.9v6.27a3 3 0 1 1-2 0V31.9a5 5 0 0 1-3.9-3.9h-6.27a3 3 0 1 1 0-2h6.27a5 5 0 0 1 3.9-3.9v-6.27a3 3 0 1 1 2 0v6.27a5 5 0 0 1 3.9 3.9h6.27a3 3 0 1 1 0 2H31.9z'%3E%3C/path%3E%3C/svg%3E");
+        text-align: center;
         align-items: center;
-        justify-content: center;
     }
     
-    title{
-background: color: #;
-
-}
-    
     fieldset{
-        border: 4px solid gold;
         text-align: center;
-        height: 410px;
-        width: 260px;
+        border-radius: 5px;
+        border:0.5px solid white;
+        height: 400px;
+        width: 280px;
         margin: 0 auto;
-        border-radius: 15px;
-        background: #333;
+        box-shadow:0 0 2px 2px white;
+        background: linear-gradient(to top left, #A44D01, #E99331);
         
     }
     
     input {
-        width: 86%;
+        width: 80%;
         height: 35px;
         background-color: #333;
         outline-color: none;
         outline: none ;
         border: #333;
         font-size: 17px;
-        border-bottom: 2px solid gold;
+        border-bottom: 2px solid #BE0A0B;
         font-wight: 100;
         caret-color: navy;
         border-radius: 2px;
-        margin:0
+        margin:0;
         
     }
     
     button {
-        width: 96%;
+        width: 85%;
         margin-top:8px;
         height: 28px;
         border: #444;
         text-transform: uppercase;
         border-radius: 2px;
-        background: blueviolet;
+        background: #BE0A0B;
         color: whitesmoke;
         margin-bottom: 6px;
         position: relative;
     }
-    class=""
+    
     h1 {
-        color: solid gold;
+        color: black;
     }
     
     p, a{
@@ -86,51 +89,44 @@ background: color: #;
     padding: 0;
     clip-path: circle(50%);
 }
+header{
+    width: 100%;
+    height: 50px;
+    margin:auto;
+    color: whitesmoke;
+    background: black;
+    border-bottom: 2px solid firebrick;
+}
 
 </style>
 <link rel="shortcut icon" href="codingfam.png" type="image/x-icon">
 
-<body><br>
-<form>
+<body>
+      <header><br>
+          <h2 style="font-size: 25px">Gaming Tournaments.</h2>
+      </header><br><br>
+
     <fieldset>
+        <form>
         <br>
-        <img src="codingfam.png" alt="img">
-       
-        <h1>Coding Family</h1>
-        
-           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" /> <link rel="stylesheet" href="css/style.css" /> </head> <body> <div class="container">         <form action="" id="codingfamilysignin" method="post">
-            <p>
-                <label for="username">Username</label>
-                <input type="text" name="username" id="username">
-            </p>
-            <p>
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" />
-                <i class="bi bi-eye-slash" id="togglePassword"></i>
-            </p>
-            <a href="signup.html"></a><button type="submit" id="submit" class="submit">Log In</button></div><br><p style="font-size:15px">Dont Have An Account?</p>&nbsp;<a href="signup.html">Signup</a>
+        <a href="./codingfam.png"></a>
+        <img src="codingfam.png" alt="img"><br><br>
+        <h3>LOGIN WITH US</h3><br><br>
+            <input type="text" name="user" id="username" placeholder="  Enter Username" maxlength="12">
+            <br><br>
+            <input type="password" name="pass" id="pass" placeholder="  Enter Password" min="5" maxlength="9" ><br><br><p style="font-size:15px">Don't Have An Account?</p>&nbsp;<a href="signup.html">Signup</a><br><br>
+            <button type="submit" onclick="show()">login</button><br>
           <br>  
-        </form>
-    </div>
+          </form>
+    </fieldset>
+    <br>
+    <footer>
+      <h4 style="color: goldenrod;font-size:12px">Coding Family &copy;2023</h4>
+    </footer>
     <script>
-        const togglePassword = document.querySelector("#togglePassword");
-        const password = document.querySelector("#password");
-
-        togglePassword.addEventListener("click", function () {
-            // toggle the type attribute
-            const type = password.getAttribute("type") === "password" ? "text" : "password";
-            password.setAttribute("type", type);
-            
-            // toggle the icon
-            this.classList.toggle("bi-eye");
-        });
-
-        // prevent form submit
-        const form = document.querySelector("form");
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-        });
+          function show(){
+                window.location.replace('homepage.html')
+          }
     </script>
 </body>
-</fieldset>
 </html>

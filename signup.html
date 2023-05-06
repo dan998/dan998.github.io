@@ -2,83 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Coding family Login Page</title>
+    <met name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Coding Family | Signup</title>
 </head>
 <style>
-      body{
-        background: #444;
-        text-algn: center;
+          *{
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    text-decoration:  none;
+}
+    body{
+        background-color: #37294b;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='52' height='52' viewBox='0 0 52 52'%3E%3Cpath fill='%23665f71' fill-opacity='1' d='M0 17.83V0h17.83a3 3 0 0 1-5.66 2H5.9A5 5 0 0 1 2 5.9v6.27a3 3 0 0 1-2 5.66zm0 18.34a3 3 0 0 1 2 5.66v6.27A5 5 0 0 1 5.9 52h6.27a3 3 0 0 1 5.66 0H0V36.17zM36.17 52a3 3 0 0 1 5.66 0h6.27a5 5 0 0 1 3.9-3.9v-6.27a3 3 0 0 1 0-5.66V52H36.17zM0 31.93v-9.78a5 5 0 0 1 3.8.72l4.43-4.43a3 3 0 1 1 1.42 1.41L5.2 24.28a5 5 0 0 1 0 5.52l4.44 4.43a3 3 0 1 1-1.42 1.42L3.8 31.2a5 5 0 0 1-3.8.72zm52-14.1a3 3 0 0 1 0-5.66V5.9A5 5 0 0 1 48.1 2h-6.27a3 3 0 0 1-5.66-2H52v17.83zm0 14.1a4.97 4.97 0 0 1-1.72-.72l-4.43 4.44a3 3 0 1 1-1.41-1.42l4.43-4.43a5 5 0 0 1 0-5.52l-4.43-4.43a3 3 0 1 1 1.41-1.41l4.43 4.43c.53-.35 1.12-.6 1.72-.72v9.78zM22.15 0h9.78a5 5 0 0 1-.72 3.8l4.44 4.43a3 3 0 1 1-1.42 1.42L29.8 5.2a5 5 0 0 1-5.52 0l-4.43 4.44a3 3 0 1 1-1.41-1.42l4.43-4.43a5 5 0 0 1-.72-3.8zm0 52c.13-.6.37-1.19.72-1.72l-4.43-4.43a3 3 0 1 1 1.41-1.41l4.43 4.43a5 5 0 0 1 5.52 0l4.43-4.43a3 3 0 1 1 1.42 1.41l-4.44 4.43c.36.53.6 1.12.72 1.72h-9.78zm9.75-24a5 5 0 0 1-3.9 3.9v6.27a3 3 0 1 1-2 0V31.9a5 5 0 0 1-3.9-3.9h-6.27a3 3 0 1 1 0-2h6.27a5 5 0 0 1 3.9-3.9v-6.27a3 3 0 1 1 2 0v6.27a5 5 0 0 1 3.9 3.9h6.27a3 3 0 1 1 0 2H31.9z'%3E%3C/path%3E%3C/svg%3E");
+        margin:0;
+        padding: 0;
+        text-align: center;
         align-items: center;
-        justify-content: center;
     }
     
-    title{
-background: color: #;
-
-}
-    
     fieldset{
-        border: 4px solid gold;
+        border: 0.5px solid white;
+        padding:2%;
+        box-shadow:0 0 2px 2px white;
         text-align: center;
-        height: 480px;
-        width: 260px;
+        height: 450px;
+        width: 270px;
         margin: 0 auto;
-        border-radius: 15px;
-        background: #333;
+        border-radius: 5px;
+        background: linear-gradient(to top left, #A44D01, #E99331);
         
     }
     
     input {
-        width: 86%;
-        height: 35px;
-        background-color: #333;
-        outline-color: none;
-        outline: none ;
-        border: #333;
+        width: 80%;
+        height: 20px;
+        padding:3%;
+        background: #333;
+        outline-colr: navy;
+        border: #444;
         font-size: 17px;
-        border-bottom: 2px solid gold;
         font-wight: 100;
+        outline: none;
+        color: yellow;
+        border-bottom: 2px solid #BE0A0B;
         caret-color: navy;
         border-radius: 2px;
-        margin:0
         
     }
     
     button {
-        width: 96%;
-        margin-top:8px;
+        width: 90%;
         height: 28px;
         border: #444;
+        margin: 0;
+        padding: 0;
         text-transform: uppercase;
         border-radius: 2px;
-        background: blueviolet;
+        background: #BE0A0B;
         color: whitesmoke;
-        margin-bottom: 6px;
         position: relative;
     }
-    class=""
-    h1 {
-        color: solid gold;
+    
+    h3 {
+        color: gold;
     }
     
-    p, a{
-        
-        display: inline-block;
-        text-decoration: none ;
-        margin:0 auto ;
-        padding:0;
-    }
-    
-    p{
-        padding-bottom:0px;
-    }
-    
-
     button:active{
         background: purple;
     }
-    
     img {
     width: 100px;
     height: 100px;
@@ -87,52 +79,47 @@ background: color: #;
     clip-path: circle(50%);
 }
 
+a{
+    text-decoration: none;
+}
+
+a:after{
+     color: dodgerblue;
+}
+header{
+    width: 100%;
+    height: 50px;
+    margin:auto;
+    color: whitesmoke;
+    background: black;
+    border-bottom: 2px solid firebrick;
+}
+
 </style>
-<link rel="shortcut icon" href="codingfam.png" type="image/x-icon">
-
-<body><br>
-<form>
-    <fieldset>
-        <br>
-        <img src="codingfam.png" alt="img">
-       
-        <h1>Coding Family</h1>
-        
-           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" /> <link rel="stylesheet" href="css/style.css" /> </head> <body> <div class="container">         <form action="" id="Codingfamilysignup"method="post">
-            <p>
-                <label for="username">Username</label>
-                <input type="text" name="username" id="username">
-            </p>
-                         <label for="username">Gmail account</label>
-                <input type="text" name="username" id="mail account"><placeholder="example@gmail.com"></placeholder>            </p>
-            <p>
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" />
-                <i class="bi bi-eye-slash" id="togglePassword"></i>
-            </p>
-            <a href=""></a><button type="submit" id="submit" class="submit">Signup</button></div><br><p style="font-size:15px">Already Have An Account?</p>&nbsp;<a href="signin.html">Signin</a>
-          <br>  
-        </form>
-    </div>
+<body>
+      <header><br>
+          <h2 style="font-size: 25px">Gaming Tournaments.</h2>
+      </header><br>
+      <br>
+    <form>
+       <fieldset><br>
+       						<img src="codingfam.png" alt="img"><br><br>
+           <h3 style="color:black">REGISTER / SIGNUP WITH US</h3><br><br>
+           <input type="text" placeholder="Enter Username" required  autocomplete="on" maxlength="10"><br><br>
+           <input type="email" placeholder="Enter Email" required  autocomplete="on">
+           <br><br>
+           <input type="password" placeholder="Enter Password" required  autocomplete="on" maxlength="10"><br><br>
+           <p>Already Have An Account?&nbsp;<a href="signin.html">Sign In</a></p><br>
+           <button type="submit" onclick="show()">Create New Account</button><br>
+       </fieldset>
+    </form><br>
+    <footer>
+      <h4 style="color: goldenrod;font-size:12px">Coding Family &copy;2023</h4>
+    </footer>
     <script>
-        const togglePassword = document.querySelector("#togglePassword");
-        const password = document.querySelector("#password");
-
-        togglePassword.addEventListener("click", function () {
-            // toggle the type attribute
-            const type = password.getAttribute("type") === "password" ? "text" : "password";
-            password.setAttribute("type", type);
-            
-            // toggle the icon
-            this.classList.toggle("bi-eye");
-        });
-
-        // prevent form submit
-        const form = document.querySelector("form");
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-        });
+          function show(){
+                window.location.replace('signin.html')
+          }
     </script>
 </body>
-</fieldset>
 </html>
