@@ -95,4 +95,8 @@ let words = [
         word: "Bible",
         hint: "Spiritual book that tells the future"
     },
+    {   
+        word: "water",
+        hint: "without me you will die"
+        },
 ]
