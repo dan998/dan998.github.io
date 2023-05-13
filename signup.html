@@ -101,25 +101,20 @@ header{
           <h2 style="font-size: 25px">Gaming Tournaments.</h2>
       </header><br>
       <br>
-    <form>
+    <form action="./signin.html">
        <fieldset><br>
        						<img src="codingfam.png" alt="img"><br><br>
            <h3 style="color:black">REGISTER / SIGNUP WITH US</h3><br><br>
-           <input type="text" placeholder="Enter Username" required  autocomplete="on" maxlength="10"><br><br>
-           <input type="email" placeholder="Enter Email" required  autocomplete="on">
+           <input type="text" placeholder="Enter Username" autocomplete="on" required><i class="fa fa-lock"></i>
+           <input type="email" placeholder="Enter Email" autocomplete="on"> required><i class="fa fa-lock"></i>
            <br><br>
-           <input type="password" placeholder="Enter Password" required  autocomplete="on" maxlength="10"><br><br>
+           <input type="password" placeholder="Enter Password" autocomplete="on"  required><i class="fa fa-lock"></i><br><br>
            <p>Already Have An Account?&nbsp;<a href="signin.html">Sign In</a></p><br>
-           <button type="submit" onclick="show()">Create New Account</button><br>
+           <button type="submit">Create New Account</button><br>
        </fieldset>
     </form><br>
     <footer>
       <h4 style="color: goldenrod;font-size:12px">Coding Family &copy;2023</h4>
     </footer>
-    <script>
-          function show(){
-                window.location.replace('signin.html')
-          }
-    </script>
 </body>
 </html>
