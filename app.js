@@ -8,11 +8,9 @@ var box3 = document.querySelector('.box3')
 
 var box2 = document.querySelector('.box2')
 
-var box4 = document.querySelector('.box4')
-
 var box5 = document.querySelector('.box5')
 
-var box6 = document.querySelector('.box6')
+var box4 = document.querySelector('.box4')
 
 // events
 
@@ -56,17 +54,12 @@ box4.addEventListener('click', () => {
         alert('could not continue')
     }
 });
-', () => {
+box5.addEventListener('click', () => {
     var alert5 = confirm('Do You Want To Continue?')
     
-    if(alert5) 
-    
-    ', () => {
-    var alert6 = confirm('Do You Want To Continue?')
-    
-    if(alert6) {
+    if(alert5) {
     // 
-         window.location.href = "./Games/Solitaire/dist/index.html"
+         window.location.href = "./Games/Word Scrabble/index.html"
     }else {
         alert('could not continue')
     }
