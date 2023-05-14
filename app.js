@@ -12,8 +12,6 @@ var box5 = document.querySelector('.box5')
 
 var box4 = document.querySelector('.box4')
 
-var box6 = document.querySelector('.box6').
-
 // events
 
 box1.addEventListener('click', () => {
@@ -66,14 +64,5 @@ box5.addEventListener('click', () => {
         alert('could not continue')
     }
 });
-
-if(alert6) {
-    // 
-         window.location.href = "./Games/Solitaire/dist/index.html"
-    }else {
-        alert('could not continue')
-    }
-});
-
 
 
