@@ -68,7 +68,7 @@ box5.addEventListener('click', () => {
     }
 });
 box6.addEventListener('click', () => {
-    var alert5 = confirm('Do You Want To Continue?')
+    var alert6 = confirm('Do You Want To Continue?')
     
     if(alert6) {
     // 
