@@ -12,7 +12,7 @@ var box5 = document.querySelector('.box5')
 
 var box4 = document.querySelector('.box4')
 
-var box4 = document.querySelector('.box6').
+var box6 = document.querySelector('.box6').
 
 // events
 
