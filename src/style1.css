@@ -1,0 +1,178 @@
+
+html{
+    font-size: 30px;
+    color: #fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Georgia;
+}
+
+body {
+    background: #222;
+    box-sizing: border-box;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    text-align: center;
+    
+}
+
+.show, .none{
+    display: none;
+}
+
+.hide{
+    display: block;
+}
+
+.free{
+    display: block;
+    text-align: center;
+}
+#toggle:focus, #toggle:focus-within {
+   transform: rotateZ(720deg);
+   transition-delay: 0s;
+   transition-duration: 0.5s;
+}
+
+
+}
+section {
+    width: 100%;
+    background: #000;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    height: 180px;
+    list-style-type:none;
+    color: whitesmoke;
+    
+    
+}
+
+section ul li{
+    width: 100%;
+}
+
+li{
+   min-width: 100%;
+    list-style-type: none;
+    border-top: 4px solid #ffffff;
+    padding: 7px;
+    text-align: left;
+    padding-left: 5px;
+    font-family: normal;
+    font-size: 30px;
+    
+}
+
+ul li:hover{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+
+button {
+    transform: transate(310px);
+    float: right;
+    left: -5%;
+    position: fixed;
+    top: -70%;
+    
+    
+}
+
+
+.span1{
+    transform: translateY(-8px);
+}
+.span2{
+    margin-bottom: 5px;
+}
+.span3{
+    
+    transform: translateY(8px);
+}
+
+footer{
+    margin: 50px;
+    transform: translateY(-19px);
+}
+
+img {
+    width: 100%;
+    height: 250px;
+    margin: 0;
+    padding: 0;
+  
+}
+
+button {
+    display: inline-block;
+  cursor: pointer;
+  text-align: right;
+  padding: 10px 15px;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  position: relative;
+    
+}
+
+
+button span {
+  display: block;
+  position: absolute;
+  text-align: right;
+  height: 3px;
+  width: 25px;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 3px;
+  opacity: 1;
+  right: 0;
+  transform: rotate(0deg);
+  transition: all 0.25s ease-out;
+}
+
+header {
+    background: #000;
+    font-size: 20px;
+    height: 50px;
+    position: fixed;
+    width: 100%;
+    text-shadow: 2px 2px 2px #777;
+    text-align: left;
+}
+h1{
+    padding: 5px;
+}
+
+h2{
+    padding: 30px;
+    font-size: 30px;
+}
+
+b{
+    color: firebrick;
+    text-shadow: 3px 2px 2px firebrick;
+}
+
+fieldset{
+    margin: auto;
+    background: orangered;
+    width: 80%;
+    height: 400px;
+    padding: 0;
+    color: #222;
+    border-radius: 19px;
+    border: none;
+    overflow: hidden;
+    display: block;
+ 
+ }
+
