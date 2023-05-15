@@ -2,27 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <met name="viewport" content="width=device-width, initial-scale=1.0"/><script defer src="app.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>Coding Family Portfolio</title>
-   
+    <met name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script defer src="./src/app.js"></script>
+    <script defer src="./src/media.js"></script>
+    <link rel="stylesheet" href="./src/media.css">
+    <link rel="stylesheet" href="./src/style1.css">
+    <title>Coding Family Games</title>
 </head>
 <body>
- 
-    <header>
-        <h1>
-        Coding Family 
+    <header class="big">
+        <h1 id="big">
+        Coding <b>Family</b>
         </h1>
-       <h2> Free Games List </h2>
+        
+        <button id="toggle">
+            <span class="span1"></span>
+            
+            <span class="span2"></span>
+            <span class="span3"></span>
+        </button>
+       
+          <section class="show">
+             
+             
+            
+        <ul>
+           
+           <li id="list1">Home Page</li>
+          
+           <li id="list2">Portfolio</li>
+           
+           <li id="list3">Tournament Games</li>
+           
+           <li id="list4">Change Theme</li>
+         <nav class="none">
+             <ul>
+                 <li id="list5">Dark Theme</li>
+                 <li id="list6">Light Theme</li>
+             </ul>
+         </nav>
+        </ul>
+       
+        
+    </section>
     </header>
     
     <br>
-        <br>
-        <main>
+  <h2 id="head">Game List</h2>
+    
+       
+        <main>     
     <div class="card">
         
-    <fieldset class="box1">
-        <img src="./Gamesimage/20230508_154033.jpg" alt="url">
+    <fieldset class="box1" id="box0">
+        <img src="./Gamesimage/Blackjack.jpg" alt="url">
         <br>
         <h2>Blackjack</h2>
         <br>
@@ -59,33 +92,29 @@
         <br>
     
    <fieldset class="box5">
-        <img src="./Gamesimage/Word scrabble .jpg" alt="url">
+        <img src="./Gamesimage/Word scrabble.jpg" alt="url">
         <br>
       <h2>Word Scrabble</h2>
-     
       <br>
 
     </fieldset>
      <br>
-     
-     
-     <fieldset class="box6">
-        <img src="./Gamesimage/20230513_234808.jpg" alt="url">
+    
+    </div>
+    <fieldset class="box6" id="box6">
+        <img src="./Gamesimage/Solitaire.jpg" alt="url">
         <br>
       <h2>Solitaire</h2>
-      
       <br>
 
     </fieldset>
      <br>
-     
-
     
     </div>
     </main>
       
-    <footer style="color: goldenrod">
-      Coding Family &copy;2023
+    <footer style="color: goldenrod" id="foot">
+   <p > Coding Family &copy;2023</p>
       
     </footer>
     
