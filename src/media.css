@@ -1,0 +1,48 @@
+@media(min-width: 768px){
+
+    
+    fieldset{
+        min-width: 450px;
+        min-height: 370px;
+        scroll-snap-align: center;
+        animation-delay: 1s;
+    animation-duration: 3s;
+    animation-name: rise;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+}
+
+h2{
+    font-size: 60px;
+}
+
+
+@keyframes rise {
+    0%{
+        transform: translateX(0);
+    }
+    
+    80%{
+        transform: translateX(-1600px);
+    }
+    
+    100%{
+        transform: translateX(100px);
+    }
+}
+
+        
+    
+    fieldet:first-child {
+        margin-left: 120px;
+    }
+    .card{
+        gap: 20px;
+        justify-content: space-between;
+    } 
+    
+  section ul li{
+       font-size: 75px;
+       text-align: center;
+   }
+}
