@@ -65,7 +65,7 @@ box6.addEventListener('click', () => {
     
     if(alert10) {
     // 
-         window.location.href = "./Games/Solitaire/dist/index.htmlvar "
+         window.location.href = "./Games/Solitaire/dist/index.html"
     }else {
         alert('could not continue')
     }
