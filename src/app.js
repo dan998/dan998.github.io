@@ -42,7 +42,7 @@ box3.addEventListener('click', () => {
     
     if(alert3) {
     // edit this 🙂
-         window.location.href = "./Games/Blackjack/dist/index.html"
+         window.location.href = "./Games/Hangman/dist/index.html"
     }else {
         alert('could not continue')
     }
@@ -121,7 +121,7 @@ list3.onclick = () => {
     const alert9 = confirm('would you like to continue?')
     
     if(alert9) {
-        window.location.href = "#"
+        window.location.href = "index.html"
     }else {
         alert('could not continue:(')
     }
