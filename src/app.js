@@ -104,7 +104,7 @@ list2.onclick = () => {
     const alert7 = confirm('would you like to continue?')
     
     if(alert7) {
-        window.location.href = "#"
+        window.location.href = "index.html"
     }else {
         alert('could not continue:(')
     }
