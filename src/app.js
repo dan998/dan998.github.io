@@ -37,7 +37,7 @@ box2.addEventListener('click', () => {
     }
     
 });
-box3.addEventListener('click?', () => {
+box3.addEventListener('click', () => {
     var alert3 = confirm('Do You Want To Continue?')
     
     if(alert3) {
