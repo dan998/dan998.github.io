@@ -63,9 +63,9 @@ if(innerWidth >= 768) {
 };
 
 if(innerWidth >= 768) {
-    list6.onclick = () => {
-   const alert10 = confirm('Do You Want To Continue?')
-   alert10 ?  card.style.backgroundColor = "#444": console.log("coding family".toUpperCase());
+    list5.onclick = () => {
+   const alert9 = confirm('Do You Want To Continue?')
+   alert9 ?  card.style.backgroundColor = "#444": console.log("coding family".toUpperCase());
 };
 }else {
     console.log("codung family".toUpperCase());
