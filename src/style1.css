@@ -78,7 +78,7 @@ ul li:hover{
 
 button {
     transform: transate(310px);
-    float: left;
+    float: right;
     left: -5%;
     position: fixed;
     top: -70%;

@@ -3,10 +3,15 @@ const body = document.body
 // boxes
 
 var box1 = document.querySelector('.box1')
+
 var box3 = document.querySelector('.box3')
+
 var box2 = document.querySelector('.box2')
+
 var box5 = document.querySelector('.box5')
+
 var box4 = document.querySelector('.box4')
+
 var box6 = document.querySelector('.box6')
 
 // events
@@ -30,13 +35,14 @@ box2.addEventListener('click', () => {
     }else {
         alert('could not continue')
     }
+    
 });
 box3.addEventListener('click?', () => {
     var alert3 = confirm('Do You Want To Continue?')
     
     if(alert3) {
     // edit this 🙂
-         window.location.href = "./Games/Hangman/dist/index.html"
+         window.location.href = "index.html"
     }else {
         alert('could not continue')
     }
