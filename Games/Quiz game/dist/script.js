@@ -1,37 +1,106 @@
 const quizData = [
     {
-        question: "Which language runs in a web browser?",
-        a: "Java",
-        b: "C",
-        c: "Python",
-        d: "JavaScript",
-        correct: "d",
-    },
-    {
-        question: "What does CSS stand for?",
-        a: "Central Style Sheets",
-        b: "Cascading Style Sheets",
-        c: "Cascading Simple Sheets",
-        d: "Cars SUVs Sailboats",
-        correct: "b",
-    },
-    {
-        question: "What does HTML stand for?",
-        a: "Hypertext Markup Language",
-        b: "Hypertext Markdown Language",
-        c: "Hyperloop Machine Language",
-        d: "Helicopters Terminals Motorboats Lamborginis",
+        question: "(1)What is a verb?",
+        a: "(a)action word",
+        b: "(b)joining word",
+        c: "(c)naming word",
+        d: "(d)none of the above",
         correct: "a",
     },
     {
-        question: "What year was JavaScript launched?",
+        question: "(2)As______as gall.",
+        a: "sweet",
+        b: "black",
+        c: "fat",
+        d: "bitter",
+        correct: "d",
+    },
+   {
+        question: "(3)What is a noun?",
+        a: "action word",
+        b: "joining word",
+        c: "naming word",
+        d: "none of the above",
+        correct: "c",
+    },
+    {
+        question: "(4)What year did Guyana became independent?",
         a: "1996",
-        b: "1995",
+        b: "1970",
+        c: "1994",
+        d: "1966",
+        correct: "d",
+    },
+    
+ {
+        question: "(5)What year was Linden Town Week launched in Guyana?",
+        a: "1996",
+        b: "2002",
         c: "1994",
         d: "none of the above",
-        correct: "b",
+        correct: "a",
     },
-];
+    
+    {
+        question: "(6)Willan can_____faster than_______.",
+        a: "run;i",
+        b: "ran;i",
+        c: "ran;me",
+        d: "run;me",
+        correct: "d",
+    },
+    
+      {
+        question: "(7)_____and_____went for a walk.",
+        a: "He;I",
+        b: "Him;me",
+        c: "He;me",
+        d: "Him;I",
+        correct: "a",
+    },
+      {
+        question: "(8)The Doctors_____nurses worked hard to save the little girl life.",
+        a: "either",
+        b: "neither",
+        c: "and",
+        d: "together",
+        correct: "c",
+    },
+     {
+        question: "(9)_____are______?",
+        a: "Who;them",
+        b: "Whom;they",
+        c: "Who;they",
+        d: "Whom;they",
+        correct: "c",
+    },
+    
+       {
+        question: "(10)Wait their_____I have finished!",
+        a: "how",
+        b: "when",
+        c: "that",
+        d: "till",
+        correct: "d",
+    },
+       {
+        question: "(11)As havy as_______.",
+        a: "feader",
+        b: "a pin",
+        c: "leader",
+        d: "a hear clip",
+        correct: "a",
+    },
+    {
+        question: "(12)She brought some_______.",
+        a: "steak",
+        b: "stake",
+        c: "staek",
+        d: "stak",
+        correct: "a",
+    },
+    ];
+    
 
 const quiz = document.getElementById('quiz')
 const answerEls = document.querySelectorAll('.answer')
@@ -90,7 +159,7 @@ submitBtn.addEventListener('click', () => {
         } else {
             quiz.innerHTML = `
                 <h2>You answered ${score}/${quizData.length} questions correctly</h2>
-
+ 
                 <button onclick="location.reload()">Reload</button>
             `
         }
