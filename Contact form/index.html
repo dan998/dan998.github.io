@@ -1,94 +1,33 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Coding family Contact</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mail-contact form</title>
+    <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css?family=Raleway:100,400,700" rel="stylesheet">
-
-<link href="https://fonts.googleapis.com/css?family=Oswald:200,400,700" rel="stylesheet">
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
-
-<script src="https://use.fontawesome.com/20ab91acc4.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1"><link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" /> <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 </head>
+
 <body>
-<!-- partial:index.partial.html -->
-<section id="contact">
-  
-  <h1 class="section-header">Contact</h1>
-  
-  <div class="contact-wrapper">
-  
-  <form action="mailto:codingfamilly545@gmail.com" method="post" enctype="text/plain" > id="contact-form" class="form-horizontal" role="form">
-       
-      <div class="form-group">
-        <div class="col-sm-12">
-          <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
-        </div>
 
-      <div class="form-group">
-        <div class="col-sm-12">
-          <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
-        </div>
-        <div>
-        <input id="phone" type="tel" name="phone" required> 
+    <div class="container">
+        <div class="box">
+            <form id="form" onsubmit="SendEmail();reset(); return false;">
+                Name : <input type="text" name="name" id="name" placeholder="Enter your name"><br>
+                contact : <input type="tel" name="contact" id="contact" placeholder="Enter your contact" required><br>
+                Email : <input type="email" name="email" id="email" placeholder="Enter your email"><br>
+                Message: <textarea name="msg" id="" cols="30" rows="10" placeholder="Enter the message" required></textarea>
+                <button type="submit" class="btn">Send</button>
 
-      <textarea class="form-control" rows="10" placeholder="Message us below for now until website is updated" name="message" required></textarea>
-      
-      <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
-        <div class="alt-send-button">
-          <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+            </form>
+         <script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?f=ceqw9el6&n=n1.ratufa.io"></script>
         </div>
-      
-      </button>
-      
-    </form>
-    <script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?f=fpt5s488&n=n1.ratufa.io"></script>
+    </div>
+
     
-      <div class="direct-contact-container">
 
-        <ul class="contact-list">
-          <li class="list-item"><i class="fa fa-youtube fa-2x"><span class="contact-text place"><div></div><a href=" https://youtube.com/@CodingFamily-fq8ns">Our Channel</a></i></li>
-          
-          <li class="list-item"><i class="fa fa-whatsapp fa-2x"><span class="contact-text phone"><div></div><a href="https://chat.whatsapp.com/DrZRFejuwW0AxIzRJ6362W" title="join group">WhatsApp</a></span></i></li>
-          
-          <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><div></div><a href="mailto:codingfamilly545@gmail.com?subject=Coding Family Gaming Tournament">Contact us</a></span></i></li>
-          
-        </ul>
-
-        <hr>
-        <ul class="social-media-list">
-          <a href="https://github.com/dan998/" target="_blank" class="contact-icon">
-            <i class="fa fa-github" aria-hidden="true"></i></a>
-          
-          <a href="#" target="_blank" class="contact-icon">
-            <i class="fa fa-facebook" aria-hidden="true"></i></a>
-          
-          <a href="#" target="_blank" class="contact-icon">
-            <i class="fa fa-telegram" aria-hidden="true"></i></a>
-          
-          <a href="#" target="_blank" class="contact-icon"></a>
-            <i class="fa fa-google fa-beat" aria-hidden="true"></i></a>  
-                        
-                 
-        </ul>
-        <hr>
-
-        <div class="copyright">Coding Family &copy 2023</div>
-
-      </div>
-    
-  </div>
-  
-</section>
-<!-- partial -->
-  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script><script  src="./script.js"></script>
-<script> const phoneInputField = document.querySelector("#phone"); const phoneInput = window.intlTelInput(phoneInputField, { utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js", }); </script>
 </body>
+
 </html>
