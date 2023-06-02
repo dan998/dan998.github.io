@@ -15,7 +15,12 @@
     <div class="container">
         <div class="box">
             <form id="form" onsubmit="SendEmail();reset(); return false;">
-                Name : <input type="text" name="name" id="name" placeholder="Enter your name"><br>
+                Proof of address: 
+
+<img id="output" src="" width="100" height="100">
+
+<input name="photo" type="file" accept="image/*" onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])">
+<br>            Name : <input type="text" name="name" id="name" placeholder="Enter your name"><br>
                 contact : <input type="tel" name="contact" id="contact" placeholder="Enter your contact" required><br>
                 Email : <input type="email" name="email" id="email" placeholder="Enter your email"><br>
                 Message: <textarea name="msg" id="" cols="30" rows="10" placeholder="Enter the message" required></textarea>
