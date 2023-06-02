@@ -89,7 +89,7 @@ box7.addEventListener('click', () => {
 
     // edit this 🙂
 
-         window.location.href = "./Games/quiz game/dist/index.html"
+         window.location.href = "./Games/Quiz game/dist/index.html"
 
     }else {
 
