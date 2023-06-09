@@ -106,7 +106,7 @@ box8.addEventListener('click', () => {
 
     
 
-    if(alert7) {
+    if(alert8) {
 
     // edit this 🙂
 
