@@ -16,6 +16,8 @@ var box6 = document.querySelector('.box6')
 
 var box7 = document.querySelector('.box7')
 
+var box8 = document.querySelector('.box8')
+
 // events
 
 box1.addEventListener('click', () => {
@@ -90,6 +92,25 @@ box7.addEventListener('click', () => {
     // edit this 🙂
 
          window.location.href = "./Games/Quiz game/dist/index.html"
+
+    }else {
+
+        alert('could not continue')
+
+    }
+
+});
+box8.addEventListener('click', () => {
+
+    var alert8 = confirm('Do You Want To Continue?')
+
+    
+
+    if(alert7) {
+
+    // edit this 🙂
+
+         window.location.href = "./Games/Ludo/index.html"
 
     }else {
 
