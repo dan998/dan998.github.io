@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔠</text></svg>">
+  <title>Coding Family Gaming Tournament</title>
+  <meta name="description"
+        content="Play a fun and challenging word search game with a randomly generated puzzle and a variety of words to find.">
+  <meta name="keywords" content="word search, puzzle, game, fun, challenge, online word search game">
+  <meta name="author" content="Coding Family Gaming Tournament">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          background-color: lightblue;
+     
+      }
+
+      .game-container {
+          max-width: 630px;
+          margin: auto;
+          text-align: center;
+          padding: 20px;
+      }
+
+      .game-board {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          margin-top: 30px;
+          user-select: none;
+      }
+
+      .game-board .cell {
+          width: 100px;
+          height: 100px;
+          line-height: 100px;
+          border: 1px solid red;
+          text-align: center;
+          font-size: 25px;
+          cursor: pointer;
+      }
+
+      .game-board .cell.found {
+          background-color: red;
+      }
+
+      .game-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: px;
+      }
+
+      .word-list {
+          margin-top: 10px;
+          text-align: left;
+      }
+
+      .restart-button {
+          font-size: 18px;
+          padding: 5px 10px;
+          background-color: #007bff;
+          color: white;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+
+      .restart-button:hover {
+          background-color: #0062cc;
+      }
+
+      @media (max-width: 768px) {
+          .game-bowidthard .cell {
+              : 20px;
+              height: 20px;
+              line-height: 20px;
+              font-size: 12px;
+          }
+      }
+
+      @media (max-width: 425px) {
+          .game-board .cell {
+              width: 18px;
+              height: 18px;
+              line-height: 18px;
+              font-size: 12px;
+          }
+      }
+  </style>
+</head>
+<body>
+<div class="game-container">
+  <div class="game-header">
+  </div>
+  <div class="game-board"></div>
+  <div class="word-list"></div>
+</div>
+<script type="text/javascript">
+  let words = ['javascript', 'html', 'css', 'web', 'design', 'coding', 'computer', 'programming'];
+  const wordSearchSize = 15;
+
+  let selectedWord = '';
+  let gameBoard = [];
+  let foundWords = [];
+
+  function createGameBoard() {
+    for (let i = 0; i < wordSearchSize; i++) {
+      gameBoard[i] = [];
+      for (let j = 0; j < wordSearchSize; j++) {
+        gameBoard[i][j] = '';
+      }
+    }
+  }
+
+  function placeWordsOnGameBoard() {
+    for (let i = 0; i < words.length; i++) {
+      let wordPlaced = false;
+      while (!wordPlaced) {
+        let direction = Math.floor(Math.random() * 8);
+        let row = Math.floor(Math.random() * wordSearchSize);
+        let col = Math.floor(Math.random() * wordSearchSize);
+        if (canPlaceWord(words[i], row, col, direction)) {
+          placeWord(words[i], row, col, direction);
+          wordPlaced = true;
+        }
+      }
+    }
+    for (let i = 0; i < wordSearchSize; i++) {
+      for (let j = 0; j < wordSearchSize; j++) {
+        if (gameBoard[i][j] === '') {
+          let randomLetter = String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+          gameBoard[i][j] = randomLetter;
+        }
+      }
+    }
+  }
+
+  function canPlaceWord(word, row, col, direction) {
+    let wordLength = word.length;
+    let numRows = gameBoard.length;
+    let numCols = gameBoard[0].length;
+
+    if (direction === 0) {
+      if (col + wordLength > numCols) {
+        return false;
+      }
+      for (let i = 0; i < wordLength; i++) {
+        if (gameBoard[row][col + i] !== '' && gameBoard[row][col + i] !== word.charAt(i)) {
+          return false;
+        }
+      }
+      return true;
+    } else if (direction === 1) {
+      if (row + wordLength > numRows) {
+        return false;
+      }
+      for (let i = 0; i < wordLength; i++) {
+        if (gameBoard[row + i][col] !== '' && gameBoard[row + i][col] !== word.charAt(i)) {
+          return false;
+        }
+      }
+      return true;
+    } else if (direction === 2) {
+      if (row + wordLength > numRows || col + wordLength > numCols) {
+        return false;
+      }
+      for (let i = 0; i < wordLength; i++) {
+        if (gameBoard[row + i][col + i] !== '' && gameBoard[row + i][col + i] !== word.charAt(i)) {
+          return false;
+        }
+      }
+      return true;
+    } else if (direction === 3) {
+      if (row + wordLength > numRows || col - wordLength < -1) {
+        return false;
+      }
+      for (let i = 0; i < wordLength; i++) {
+        if (gameBoard[row + i][col - i] !== '' && gameBoard[row + i][col - i] !== word.charAt(i)) {
+          return false;
+        }
+      }
+      return true;
+    } else if (direction === 4) {
+      if (col - wordLength < -1) {
+        return false;
+      }
+      for (let i = 0; i < wordLength; i++) {
+        if (gameBoard[row][col - i] !== '' && gameBoard[row][col - i] !== word.charAt(i)) {
+          return false;
+        }
+      }
+      return true;
+    } else if (direction === 5) {
+      if (row - wordLength < -1 || col - wordLength < -1) {
+        return false;
+      }
+      for (let i = 0; i < wordLength; i++) {
+        if (gameBoard[row - i][col - i] !== '' && gameBoard[row - i][col - i] !== word.charAt(i)) {
+          return false;
+        }
+      }
+      return true;
+    } else if (direction === 6) {
+      if (row - wordLength < -1) {
+        return false;
+      }
+      for (let i = 0; i < wordLength; i++) {
+        if (gameBoard[row - i][col] !== '' && gameBoard[row - i][col] !== word.charAt(i)) {
+          return false;
+        }
+      }
+      return true;
+    } else if (direction === 7) {
+      if (row - wordLength < -1 || col + wordLength > numCols) {
+        return false;
+      }
+      for (let i = 0; i < wordLength; i++) {
+        if (gameBoard[row - i][col + i] !== '' && gameBoard[row - i][col + i] !== word.charAt(i)) {
+          return false;
+        }
+      }
+      return true;
+    }
+  }
+
+  function placeWord(word, row, col, direction) {
+    let wordLength = word.length;
+    if (direction === 0) {
+      for (let i = 0; i < wordLength; i++) {
+        gameBoard[row][col + i] = word.charAt(i);
+      }
+    } else if (direction === 1) {
+      for (let i = 0; i < wordLength; i++) {
+        gameBoard[row + i][col] = word.charAt(i);
+      }
+    } else if (direction === 2) {
+      for (let i = 0; i < wordLength; i++) {
+        gameBoard[row + i][col + i] = word.charAt(i);
+      }
+    } else if (direction === 3) {
+      for (let i = 0; i < wordLength; i++) {
+        gameBoard[row + i][col - i] = word.charAt(i);
+      }
+    } else if (direction === 4) {
+      for (let i = 0; i < wordLength; i++) {
+        gameBoard[row][col - i] = word.charAt(i);
+      }
+    } else if (direction === 5) {
+      for (let i = 0; i < wordLength; i++) {
+        gameBoard[row - i][col - i] = word.charAt(i);
+      }
+    } else if (direction === 6) {
+      for (let i = 0; i < wordLength; i++) {
+        gameBoard[row - i][col] = word.charAt(i);
+      }
+    } else if (direction === 7) {
+      for (let i = 0; i < wordLength; i++) {
+        gameBoard[row - i][col + i] = word.charAt(i);
+      }
+    }
+  }
+
+  function displayGameBoard() {
+    let gameBoardContainer = document.querySelector('.game-board');
+    let tableHTML = '';
+    for (let i = 0; i < gameBoard.length; i++) {
+      tableHTML += '<div class="row">';
+      for (let j = 0; j < gameBoard[i].length; j++) {
+        tableHTML += '<div class="cell" id="' + i + '-' + j + '">' + gameBoard[i][j] + '</div>';
+      }
+      tableHTML += '</div>';
+    }
+    gameBoardContainer.innerHTML = tableHTML;
+  }
+
+  function displayWordList() {
+    let wordListContainer = document.querySelector('.word-list');
+    let wordListHTML = '<h3>Words to Find:</h3><ul>';
+    for (let i = 0; i < words.length; i++) {
+      wordListHTML += '<li id="' + words[i] + '">' + words[i] + '</li>';
+    }
+    wordListHTML += '</ul>';
+    wordListContainer.innerHTML = wordListHTML;
+  }
+
+  let isMouseDown = false;
+  let selectedLettersCount = 0;
+  let touchedCells = [];
+
+  const mouseDown = (e) => {
+    e.preventDefault();
+    isMouseDown = true;
+    if (e.target.classList.contains('cell')) {
+      const cell = e.target;
+      cell.style.backgroundColor = 'yellow';
+      cell.classList.add('selected');
+      selectedWord += cell.innerHTML;
+      selectedLettersCount = 1;
+      touchedCells = [cell];
+    }
+  };
+
+
+  const mouseUp = () => {
+    isMouseDown = false;
+    checkSelectedWord();
+
+    // unselect if no match was found
+    if (selectedLettersCount > 1) {
+      const cells = document.querySelectorAll('.cell.selected');
+      cells.forEach(cell => {
+        cell.classList.remove('selected');
+        cell.style.backgroundColor = '';
+      })
+      selectedWord = '';
+    }
+
+    selectedLettersCount = 0;
+  };
+
+  function handleMouseOver(row, col) {
+    if (isMouseDown) {
+      let cell = document.getElementById(row + '-' + col);
+      let letter = cell.innerHTML;
+      selectedWord += letter;
+      cell.style.backgroundColor = 'yellow';
+      cell.classList.add('selected');
+      selectedLettersCount++;
+    }
+  }
+
+  const mouseOver = (cell) => {
+    let id = cell.getAttribute('id');
+    let row = parseInt(id.split('-')[0]);
+    let col = parseInt(id.split('-')[1]);
+    handleMouseOver(row, col);
+  };
+
+  document.addEventListener('mousedown', mouseDown);
+  document.addEventListener('touchstart', mouseDown, {passive: false});
+  document.addEventListener('mouseup', mouseUp);
+  document.addEventListener('touchend', mouseUp, {passive: false});
+
+  function touchMouseOver(e) {
+    const cell = document.elementFromPoint(e.touches[0].clientX, e.touches[0].clientY);
+    if (touchedCells.includes(cell)) {
+      return;
+    }
+    touchedCells.push(cell);
+    mouseOver(cell);
+  }
+
+  function addMouseOverListeners() {
+    let cells = document.querySelectorAll('.cell');
+    for (let i = 0; i < cells.length; i++) {
+      cells[i].addEventListener('mouseover', () => mouseOver(cells[i]));
+      cells[i].addEventListener('touchmove', touchMouseOver, {passive: false});
+    }
+  }
+
+  function checkSelectedWord() {
+    if (selectedWord.length === 0) {
+      return;
+    }
+    if (words.indexOf(selectedWord) !== -1) {
+      foundWords.push(selectedWord);
+      document.getElementById(selectedWord).style.textDecoration = 'line-through';
+      document.getElementById(selectedWord).style.color = 'gray';
+      let selectedCells = document.querySelectorAll('.cell[style="background-color: yellow;"]');
+      for (let i = 0; i < selectedCells.length; i++) {
+        selectedCells[i].classList.add('found');
+        selectedCells[i].style.backgroundColor = '';
+      }
+      selectedWord = '';
+      checkForWin();
+    }
+  }
+
+  function checkForWin() {
+    if (foundWords.length === words.length) {
+      alert('You win!');
+    }
+  }
+
+  function restartGame() {
+    selectedWord = '';
+    gameBoard = [];
+    foundWords = [];
+    loadGame();
+  }
+
+  function loadGame() {
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", 'https://random-word-api.herokuapp.com/word?number=10'); // thanks for the suggestion, ChatGPT!
+    xhr.send();
+    xhr.onload = function (e) {
+      // Check if the request was a success
+      if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+        var response = JSON.parse(xhr.responseText);
+        words = response;
+        createGameBoard();
+        placeWordsOnGameBoard();
+        displayGameBoard();
+        displayWordList();
+        addMouseOverListeners();
+      }
+    }
+  }
+
+  window.addEventListener('load', e => loadGame())
+</script>
+<script src="../sidebar.js"></script>
+</body>
+</html>
