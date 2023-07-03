@@ -18,6 +18,8 @@ var box7 = document.querySelector('.box7')
 
 var box8 = document.querySelector('.box8')
 
+var box11 = document.querySelector('.box11')
+
 // events
 
 box1.addEventListener('click', () => {
@@ -111,6 +113,26 @@ box8.addEventListener('click', () => {
     // edit this 🙂
 
          window.location.href = "./Games/Ludo/index.html"
+
+    }else {
+
+        alert('could not continue')
+
+    }
+
+});
+
+box11.addEventListener('click', () => {
+
+    var alert11 = confirm('Do You Want To Continue?')
+
+    
+
+    if(alert11) {
+
+    // edit this 🙂
+
+         window.location.href = "./Games/Word Search/landing.html"
 
     }else {
 
