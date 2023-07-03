@@ -132,7 +132,7 @@ box11.addEventListener('click', () => {
 
     // edit this 🙂
 
-         window.location.href = "./Games/Word Search/landing.html"
+         window.location.href = "./Games/Word Search/loading.html"
 
     }else {
 
