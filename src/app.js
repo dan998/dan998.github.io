@@ -21,6 +21,8 @@ var box8 = document.querySelector('.box8')
 var box11 = document.querySelector('.box11')
 
 var box12 = document.querySelector('.box12')
+
+var box13 = document.querySelector('.box13')
 // events
 
 box1.addEventListener('click', () => {
@@ -162,6 +164,27 @@ box12.addEventListener('click', () => {
     }
 
 });
+
+box13.addEventListener('click', () => {
+
+    var alert13 = confirm('Do You Want To Continue?')
+
+    
+
+    if(alert13) {
+
+    // edit this 🙂
+
+         window.location.href = "./Games/Balloon Pop Maths/index.html"
+
+    }else {
+
+        alert('could not continue')
+
+    }
+
+});
+
 // THIS IS THE HAMBURGER SECTION
 
 const toggle = document.querySelector('#toggle');
