@@ -1,0 +1,36 @@
+body {
+    background: black;
+    font-size: 50px;
+    color: #ff1f00;
+}
+
+.game-container {
+  text-align: center;
+}
+
+.options {
+  margin-bottom: 20px;
+}
+
+.game {
+  border: 1px solid #ccc;
+  padding: 100px;
+  background: skyblue;
+  display: inline-block;
+  text-align: center;
+}
+
+#result {
+  margin-top: px;
+}
+
+input[type="number"] {
+  width: 100px;
+  height: 40px;
+  background: red;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px;
+}

@@ -1,0 +1,38 @@
+<title>Time Table </title>
+<header>Brain Teaser</header>
+<body>
+<div class="game-container">
+  <div class="options">
+    <label for="timesTable">Select Times Table:</label>
+    <select id="timesTable">
+      <option value="0">Random</option>
+      <option value="1">1 times table</option>
+      <option value="2">2 times table</option>
+      <option value="3">3 times table</option>
+      <option value="4">4 times table</option>
+      <option value="5">5 times table</option>
+      <option value="6">6 times table</option>
+      <option value="7">7 times table</option>
+      <option value="8">8 times table</option>
+      <option value="9">9 times table</option>
+      <option value="10">10 times table</option>
+      <option value="11">11 times table</option>
+      <option value="12">12 times table</option>
+      <!-- Add options for 3 to 12 times tables -->
+    </select>
+    <button id="startButton">Start Game</button>
+  </div>
+  <div class="game">
+    <div class="question">
+      <span id="operand1"></span> × <span id="operand2"></span> =
+    </div>
+    <input type="number" id="answer" placeholder="Your Answer">
+    <button id="checkButton">Check</button>
+    <div id="result"></div>
+    <audio id="correctSound" src="win.mp3"></audio>
+    <audio id="wrongSound" src="unlucky.mp3"></audio>
+  </div>
+</div>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</body>
